@@ -21,13 +21,13 @@ def main():
                                    project = 'train_result', name=version)
         return 1
 
-    model = YOLO("runs/detect/" + version + "best.pt")
+    model = YOLO("train_result/" + version + "/weights/best.pt")
     metrics = model.val(data = "data/data.yaml", split = "test")
     print(f"mAP@0.5: {metrics.box.map50:.4f}")
     print(f"mAP@0.5:0.95: {metrics.box.map:.4f}")
-    print(f"Precision: {metrics.box.p:.4f}")
-    print(f"Recall: {metrics.box.r:.4f}")
-    print(f"F1-Score: {metrics.box.f1:.4f}")
+    print(f"Precision: {metrics.box.p}")
+    print(f"Recall: {metrics.box.r}")
+    print(f"F1-Score: {metrics.box.f1}")
     
 
 
