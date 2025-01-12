@@ -17,7 +17,5 @@ if not os.path.exists("data"):
     os.rename('car', 'data')
     shutil.move('video.mp4', 'data/video.mp4')
 
-if not os.path.exists("figures"):
-    os.makedirs("figures")
 
 

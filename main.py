@@ -3,9 +3,9 @@ import os
 
 
 def main(): 
-    epochs = 2
-    batch_size = 8
-    device = 0
+    epochs = 25
+    batch_size = 16
+    device = "0,1"
 
     lr_start = 0.001
     lr_end = 0.0001
